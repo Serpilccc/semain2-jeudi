@@ -18,7 +18,9 @@ def get_all_the_urls_of_val_doise()
 end
 
     get_all_the_urls_of_val_doise
-   link = Nokogiri::HTML(open())
+    link = Nokogiri::HTML(open()
     link.css('p:contains("@")').each do |email|
     puts email.text
 end
+
+Pry.start(binding)
